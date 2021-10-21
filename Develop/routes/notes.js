@@ -1,12 +1,11 @@
 const notes = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
-
-// GET Route for retrieving all the tips
+// GET Route for retrieving all the notes
 notes.get('/', (req, res) => {
-  readFromFile('./db/tips.json').then((data) => res.json(JSON.parse(data)));
+  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// POST Route for a new UX/UI tip
+// POST Route for a new UX/UI note
 notes.post('/', (req, res) => {
   console.log(req.body);
 

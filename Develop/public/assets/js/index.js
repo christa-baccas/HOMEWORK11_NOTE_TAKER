@@ -36,23 +36,23 @@ const getNotes = () =>
   });
 
 // Function that fetches the POST route and converts the object into a string
-// const saveNote = (note) =>
-//   fetch('/api/notes', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(note),
-//   });
+const saveNote = (note) =>
+  fetch('/api/notes', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(note),
+  });
 
 // Function that fetches the DELTE route
-// const deleteNote = (id) =>
-//   fetch(`/api/notes/${id}`, {
-//     method: 'DELETE',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   });
+const deleteNote = (id) =>
+  fetch(`/api/notes/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
 
 const renderActiveNote = () => {
