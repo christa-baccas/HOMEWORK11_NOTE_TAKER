@@ -56,29 +56,19 @@ const deleteNote = (id) =>
 
 
 const renderActiveNote = () => {
-  //save button is hidden
   hide(saveNoteBtn);
-  // uses dot-notation for the activeNote variable. if the activeNote.id is true then:
   if (activeNote.id) {
-    // set note title to read only
     noteTitle.setAttribute('readonly', true);
-    // set note text to read only
     noteText.setAttribute('readonly', true);
-    // value entered on the note title will appear in the as the 
     noteTitle.value = activeNote.title;
-    // value entered on the note text will appear in the
     noteText.value = activeNote.text;
   } else {
-    // read only removed
     noteTitle.removeAttribute('readonly');
-    // read only removed
     noteText.removeAttribute('readonly');
     noteTitle.value = '';
     noteText.value = '';
   }
 };
-
-// function that 
 const handleNoteSave = () => {
   // created a new object that get the value of the title and text
   const newNote = {
@@ -143,7 +133,7 @@ const renderNoteList = async (notes) => {
 
   let noteListItems = [];
 
-  // Returns HTML element with or without a delete button
+  // Creates / returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item');
