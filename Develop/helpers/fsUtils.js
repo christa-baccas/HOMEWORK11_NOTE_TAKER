@@ -11,6 +11,7 @@ const writeToFile = (destination, content) =>
     err ? console.error(err) : console.info(`\nData written to ${destination}`)
   );
 
+
   //Function to read data from a file and append the content
 const readAndAppend = (content, file) => {
   fs.readFile(file, 'utf8', (err, data) => {
