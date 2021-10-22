@@ -30,16 +30,15 @@ notes.post('/', (req, res) => {
 });
 
 
-notes.delete("/api/notes/:id", function(req, res) {
+notes.delete("/:id", function(req, res) {
     let id = req.params.id;
-
+  console.log(id)
     for (i=0; i < db.length; i++){
         
         if (db[i].id === id){
             db.splice(i,1);
         }
     }
-    writeToFile(db);
 });
 
 module.exports = notes;
