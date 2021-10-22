@@ -22,7 +22,7 @@
 
 ## Usage 
  
-![screenshot](/assets/hw11.png)
+![screenshot](hw11.png)
 
 ## Contributors 
 
