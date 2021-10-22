@@ -1,7 +1,7 @@
 const notes = require('express').Router();
 const db = require('../db/db.json')
 
-const { readFromFile, readAndAppend, removeFromFile } = require('../helpers/fsUtils');
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
 // GET Route for retrieving all the notes
@@ -36,9 +36,15 @@ notes.delete("/:id", function(req, res) {
     for (i=0; i < db.length; i++){
         
         if (db[i].id === id){
-            db.splice(i,1);
+          // console.log('message: match');
+          db.splice(i,1); 
         }
     }
-});
+
+    writeToFile('./db/db.json',db);
+    res.json(`Note deleted successfully`);
+    // location.reload(true)
+    console.log('after loop ', db)
+  });
 
 module.exports = notes;
