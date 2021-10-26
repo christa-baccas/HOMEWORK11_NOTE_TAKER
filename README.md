@@ -18,7 +18,7 @@
 * [License](#license)
   
 ## Installation 
- No installtion process needed for this app. Clikc on the link and start adding notes!
+ No installtion process needed for this app. Click on the link and start adding notes!
 
 ## Usage 
  
