@@ -1,5 +1,5 @@
 ![License Badge](https://img.shields.io/badge/license-MIT-blue)
-# HOMEWORK11_NOTE_TAKER
+# NOTE_TAKER
 
 # OOP - Team Profile Generator
 
